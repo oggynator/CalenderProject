@@ -66,7 +66,7 @@ public class MailSender {
             message.setContent(mixedMultipart);
 
             Transport transport = session.getTransport ("smtp");
-            transport.connect("smtp.gmail.com","easycutmail@gmail.com","FeldtogHejberg2020!"); //outgoing mail info
+            transport.connect("smtp.gmail.com","mailen her","adgangskode her"); //outgoing mail info
             transport.sendMessage(message, message.getAllRecipients ());
             transport.close ();
         } catch (MessagingException me) {

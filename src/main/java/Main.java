@@ -23,16 +23,16 @@ public class Main {
         calendarInviteVO.setMessage("Event message");
 
         Calendar calendar = Calendar.getInstance();
-        calendar.set(2020, 9, 1, 15, 00); //The month is not correct, if set to the actual month, it is one month ahead
+        calendar.set(2020, Calendar.OCTOBER, 25, 15, 00); //The month is not correct, if set to the actual month, it is one month ahead
 
         calendarInviteVO.setStartDate(calendar.getTime());
         calendarInviteVO.setDuration(30);
 
         List<Attendee> attendeeList = new ArrayList<Attendee>();
 
-        Organizer organizer = new Organizer("Test Organizer", "mcdickinacup@gmail.com");
+        Organizer organizer = new Organizer("Test Organizer", "test@gmail.com");
 
-        Attendee attendee = new Attendee("August H", "august.hejberg@gmail.com");
+        Attendee attendee = new Attendee("August H", "attendees mail");
 
         attendee.setRsvp(true);
         attendee.setParticipationStatus(ParticipationStatus.NEEDS_ACTION);
